@@ -1,0 +1,93 @@
+
+hide stereotype
+'skinparam linetype polyline
+skinparam linetype ortho
+skinparam sequenceMessageAlign center
+skinparam defaultFontSize 10
+skinparam defaultFontName Roboto
+skinparam defaultFontColor #000000
+skinparam defaultTextAlignment center
+skinparam PackageTitleAlignment  left
+skinparam defaultBackGroundColor #ffffff
+'skinparam defaultBorderColor #ff0000
+'skinparam rectangleBorderColor #00ff00
+!define FIRST_BC #004D93
+!define FIRST2_BC #ACDFEF
+!define FIRST3_BC #F1FDFE
+!define SECOND_BC #C59B35
+!define SECOND2_BC #FEEDB9
+!define THIRD_BC #862B13
+!define THIRD2_BC #CD7A65
+!define THIRD3_BC #F7AEA8
+!define ARROW_RED  #6C230B
+!define ARROW_BLUE  #004D93
+!define ARROW_MUSTARD  #6E5513
+!define LEFT_TO_RIGHT  left to right direction
+!define TOP_TO_BOTTOM  top to bottom direction
+<style>
+.Legend{
+  FontSize 16
+  BackGroundColor transparent
+  LineThickness 0
+}
+.Clean {
+    LineThickness 0
+    BackGroundColor transparent
+}
+.Transparent {
+    BackGroundColor transparent
+}
+.First {
+
+    BackgroundColor FIRST_BC
+    LineColor: FIRST_BC
+    FontColor #FFFFFF
+}
+.First2 {
+  BackgroundColor FIRST2_BC
+}
+.First3 {
+  BackgroundColor FIRST3_BC
+}
+.Second {
+  BackgroundColor SECOND_BC
+  LineColor: SECOND_BC
+  FontColor #FFFFFF
+}
+.Second2 {
+  BackgroundColor SECOND2_BC
+}
+.Third {
+   BackgroundColor THIRD_BC
+   FontColor #FFFFFF
+}
+.Third2 {
+   BackgroundColor THIRD2_BC
+}
+.Third3 {
+   BackgroundColor THIRD3_BC
+}
+arrow {
+    LineColor #000000
+  }
+</style>
+
+!definelong elem(e_alias,e_label,e_color,e_sprite)
+rectangle "<color: e_color><$e_sprite>\n==e_label" as e_alias <<Clean>>
+!enddefinelong
+
+!definelong grp(e_alias,e_label,e_color,e_sprite,e_stereo)
+rectangle "==<color: e_color><$e_sprite></color>e_label" as e_alias <<e_stereo>>
+!enddefinelong
+
+!define grp50(e_alias,e_label,e_color,e_sprite,e_stereo) grp(e_alias,e_label,e_color,e_sprite{scale=0.5},e_stereo)
+
+!definelong stereo(e_stereo,e_color,e_border_style)
+skinparam rectangle<<e_stereo>> {
+    LineColor e_color
+    BorderColor e_color
+    RoundCorner 10
+    BorderThickness 1
+    BorderStyle e_border_style
+}
+!enddefinelong
