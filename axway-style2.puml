@@ -1,0 +1,103 @@
+
+hide stereotype
+'skinparam linetype polyline
+skinparam linetype ortho
+skinparam sequenceMessageAlign center
+skinparam defaultFontSize 10
+skinparam defaultFontName Roboto
+skinparam defaultFontColor #000000
+skinparam defaultTextAlignment center
+skinparam PackageTitleAlignment  left
+skinparam defaultBackGroundColor #ffffff
+'skinparam defaultBorderColor #ff0000
+'skinparam rectangleBorderColor #00ff00
+
+
+!define TEXT_BLACK #22272B
+!define FIRST_BC #006580
+!define FIRST2_BC #4A4F54
+!define FIRST3_BC #E7D7CC
+
+!define SECOND_BC #B9EDEB
+!define SECOND4_BC #00A0CC
+!define SECOND2_BC #F3ECE3
+!define SECOND3_BC #7F8184
+
+!define THIRD_BC #B0001A
+!define THIRD2_BC #695CFF
+!define THIRD3_BC #FDB515
+
+!define ARROW_RED  #B0001A
+!define ARROW_BLUE  #695CFF
+!define ARROW_MUSTARD  #FDB515
+
+
+!define LEFT_TO_RIGHT  left to right direction
+!define TOP_TO_BOTTOM  top to bottom direction
+<style>
+.Legend{
+  FontSize 16
+  BackGroundColor transparent
+  LineThickness 0
+}
+.Clean {
+    LineThickness 0
+    BackGroundColor transparent
+}
+.Transparent {
+    BackGroundColor transparent
+}
+.First {
+
+    BackgroundColor FIRST_BC
+    LineColor: FIRST_BC
+    FontColor #FFFFFF
+}
+.First2 {
+  BackgroundColor FIRST2_BC
+}
+.First3 {
+  BackgroundColor FIRST3_BC
+}
+.Second {
+  BackgroundColor SECOND_BC
+  LineColor: SECOND_BC
+  FontColor #FFFFFF
+}
+.Second2 {
+  BackgroundColor SECOND2_BC
+}
+.Third {
+   BackgroundColor THIRD_BC
+   FontColor #FFFFFF
+}
+.Third2 {
+   BackgroundColor THIRD2_BC
+}
+.Third3 {
+   BackgroundColor THIRD3_BC
+}
+arrow {
+    LineColor #000000
+  }
+</style>
+
+!definelong elem(e_alias,e_label,e_color,e_sprite)
+rectangle "<color: e_color><$e_sprite>\n==e_label" as e_alias <<Clean>>
+!enddefinelong
+
+!definelong grp(e_alias,e_label,e_color,e_sprite,e_stereo)
+rectangle "==<color: e_color><$e_sprite></color>e_label" as e_alias <<e_stereo>>
+!enddefinelong
+
+!define grp50(e_alias,e_label,e_color,e_sprite,e_stereo) grp(e_alias,e_label,e_color,e_sprite{scale=0.5},e_stereo)
+
+!definelong stereo(e_stereo,e_color,e_border_style)
+skinparam rectangle<<e_stereo>> {
+    LineColor e_color
+    BorderColor e_color
+    RoundCorner 10
+    BorderThickness 1
+    BorderStyle e_border_style
+}
+!enddefinelong
