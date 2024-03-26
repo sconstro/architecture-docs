@@ -18,10 +18,10 @@ skinparam defaultBackGroundColor #ffffff
 !define FIRST2_BC #4A4F54
 !define FIRST3_BC #E7D7CC
 
-!define SECOND_BC #B9EDEB
-!define SECOND4_BC #00A0CC
-!define SECOND2_BC #F3ECE3
+!define SECOND_BC #00A0CC
+!define SECOND2_BC #B9EDEB
 !define SECOND3_BC #7F8184
+!define SECOND4_BC #F3ECE3
 
 !define THIRD_BC #B0001A
 !define THIRD2_BC #695CFF
