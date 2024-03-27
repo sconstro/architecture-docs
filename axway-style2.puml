@@ -55,6 +55,7 @@ skinparam defaultBackGroundColor #ffffff
 }
 .First2 {
   BackgroundColor FIRST2_BC
+  FontColor #FFFFFF
 }
 .First3 {
   BackgroundColor FIRST3_BC
@@ -62,7 +63,7 @@ skinparam defaultBackGroundColor #ffffff
 .Second {
   BackgroundColor SECOND_BC
   LineColor: SECOND_BC
-  FontColor #FFFFFF
+  FontColor #000000
 }
 .Second2 {
   BackgroundColor SECOND2_BC
@@ -73,6 +74,7 @@ skinparam defaultBackGroundColor #ffffff
 }
 .Third2 {
    BackgroundColor THIRD2_BC
+   FontColor #FFFFFF
 }
 .Third3 {
    BackgroundColor THIRD3_BC
