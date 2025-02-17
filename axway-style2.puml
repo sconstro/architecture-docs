@@ -103,4 +103,10 @@ skinparam rectangle<<e_stereo>> {
     BorderStyle e_border_style
     HorizontalAlignment  left 
 }
+<style>
+.e_stereo{
+ HorizontalAlignment  left
+ FontSize 24
+}
+</style>
 !enddefinelong
