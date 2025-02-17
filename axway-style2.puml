@@ -101,5 +101,6 @@ skinparam rectangle<<e_stereo>> {
     RoundCorner 10
     BorderThickness 1
     BorderStyle e_border_style
+    HorizontalAlignment  left 
 }
 !enddefinelong
